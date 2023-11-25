@@ -2,7 +2,7 @@
 // console.log('this is a debug message');
 
 function solution(N) {
-    const binaryCodes = N.toString(2).split('');
+ const binaryCodes = N.toString(2).split('');
     let isCountingZero = false;
     let zeros = 0;
     let max = 0;
