@@ -2,7 +2,6 @@
 // console.log('this is a debug message');
 
 function solution(A) {
-    // Implement your solution here
     const map = new Map();
 
     for(let i=0; i<A.length; i++) {
@@ -16,6 +15,6 @@ function solution(A) {
     }
 
     const keys = Array.from(map.keys());
-    const answer = keys.find((key) => map.get(key) <= 1);
+    const answer = keys.find((key) => map.get(key) % 2);
     return answer;
 }
