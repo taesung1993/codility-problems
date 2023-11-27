@@ -15,6 +15,7 @@ function solution(A) {
         }
     }
 
-    const answer = Array.from(map.entries()).find(([key, value]) => value === 1);
-    return answer[0];
+    const keys = Array.from(map.keys());
+    const answer = keys.find((key) => map.get(key) <= 1);
+    return answer;
 }
