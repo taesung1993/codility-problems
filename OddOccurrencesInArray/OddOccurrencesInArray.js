@@ -6,9 +6,9 @@ function solution(A) {
 
     for(let i=0; i<A.length; i++) {
         const num = A[i];
-        
+
         if(map.has(num)) {
-            map.set(num, map.get(1) + 1);
+            map.set(num, map.get(num) + 1);
         } else {
             map.set(num, 1);
         }
@@ -16,6 +16,5 @@ function solution(A) {
 
     const keys = Array.from(map.keys());
     const output = keys.find((key) => map.get(key) % 2);
-
     return output;
 }
